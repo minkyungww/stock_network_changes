@@ -19,23 +19,52 @@ This project investigates how major economic crises impact the structure and dyn
   - **Centrality Analysis** (Degree, Closeness, Betweenness, Eigenvector)
   - **Community Detection** (Louvain method)
 
+### 🔗 MST Visualization Examples
+
+#### 1997 IMF Financial Crisis
+- MST structure shifted from financial and securities firms to raw materials and construction.
+- Securities firms lost central roles due to restructuring and increased regulation.
+
+![MST before and after IMF financial crisis](./images/mst_imf.png)
+*Fig 1. Comparison of MST before and after the IMF financial crisis*
+
+#### 2008 Subprime Mortgage Crisis
+- Pre-crisis central nodes were finance companies.
+- Post-crisis central nodes included heavy industry and insurance sectors.
+
+![MST before and after Subprime Mortgage crisis](./images/mst_subprime.png)
+*Fig 2. Comparison of MST before and after the Subprime Mortgage crisis*
+
+#### 2020 COVID-19 Pandemic
+- Shift from transportation and export-heavy companies to tech, e-commerce, and domestic firms like Naver and Netmarble.
+
+![MST before and after COVID-19](./images/mst_covid.png)
+*Fig 3. Comparison of MST before and after COVID-19*
+
 ## 💡 Key Findings
 
-- Centrality generally increases during crises, indicating stronger market-wide connectivity.
-- The number of distinct communities decreases, reflecting a more unified market response.
-- Dominant industries shift:
-  - Pre-IMF: Financial & securities firms
-  - Post-IMF & Subprime: Raw materials & heavy industries
-  - Post-COVID: Tech, e-commerce, and domestic market-oriented firms
+- **Crisis Periods = Higher Centrality + Fewer Communities**  
+  → Suggests more unified market responses during downturns.
+- Securities firms dominated pre-crisis but were replaced by raw material, tech, and domestic sectors afterward.
+- Importance of digital and platform-based companies rose significantly post-COVID.
 
 ## 📈 Investment Strategy
 
-- Defined new sectors based on degree centrality:
-  - **Hub & Spoke** (high centrality)
-  - **Chain Link** (medium centrality)
-  - **Fringe Player** (low centrality)
-- Constructed efficient frontiers before, during, and after the IMF crisis.
-- Portfolio optimization showed how rebalancing can minimize risk during downturns.
+### Degree-Centrality-Based Sector Definition
+
+- **Hub & Spoke**: Core, highly-connected stocks
+- **Chain Link**: Moderately-connected stocks
+- **Fringe Player**: Weakly-connected or isolated stocks
+
+These were used to construct portfolios across different crisis phases.
+
+### Efficient Frontier Results (IMF Crisis)
+
+- Portfolio risk-return balance was visualized using efficient frontiers.
+- Results showed how optimal asset allocation shifts during crisis vs. recovery.
+
+![Efficient Frontier Before, During, and After IMF](./images/efficient_frontier_imf.png)
+*Fig 4. Efficient Frontier Before and During IMF (Left) and Until the End of IMF (Right)*
 
 ## 🛠 Tools & Technologies
 
@@ -44,7 +73,6 @@ This project investigates how major economic crises impact the structure and dyn
 - Pandas, NumPy
 - Matplotlib, Seaborn
 
-
 ## 🧑‍💻 Authors
 
 - Jaewoong Jeong (jaywoong.jeong@kaist.ac.kr)  
@@ -52,3 +80,6 @@ This project investigates how major economic crises impact the structure and dyn
 - Juchan Lee (jclee0109@kaist.ac.kr)  
 - Minkyung Choi (minkyungww@kaist.ac.kr)  
 (Korea Advanced Institute of Science and Technology)
+
+## 📄 Citation
+
