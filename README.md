@@ -1,51 +1,54 @@
-Analyzing the Network Structure and Dynamic Changes of Major Financial Market Sectors Before and After Economic Crises
-This project investigates how major economic crises affect the structural dynamics of financial markets using network analysis. Focusing on the Korean KOSPI stock market, we analyze the periods before and after the 1997 IMF financial crisis, the 2008 subprime mortgage crisis, and the 2020 COVID-19 pandemic.
+# Analyzing the Network Structure and Dynamic Changes of Major Financial Market Sectors Before and After Economic Crises
 
-📌 Objectives
-Examine structural changes in the financial market using network analysis.
+This project investigates how major economic crises impact the structure and dynamics of the financial market using network analysis techniques. The study focuses on Korea's KOSPI stock market across three major crises: the 1997 IMF financial crisis, the 2008 subprime mortgage crisis, and the 2020 COVID-19 pandemic.
 
-Analyze how industries gain or lose centrality during times of crisis.
+## 📌 Objectives
 
-Apply methods like Minimum Spanning Tree (MST), centrality measures, and community detection.
+- Analyze structural shifts in the Korean financial market before and after economic crises.
+- Apply network theory techniques (MST, centrality, community detection).
+- Develop portfolio strategies that adapt to changing market conditions.
 
-Develop sector-based investment strategies resilient to economic shocks.
+## 📊 Methodology
 
-📊 Methodology
-Data: Daily closing prices of KOSPI-listed stocks across different crisis periods.
+- **Data Source**: Daily closing prices of top 100 KOSPI-listed companies.
+- **Graph Construction**:
+  - Correlation → Distance transformation
+  - Network built using significant edges (top 10%)
+- **Analytical Methods**:
+  - **Minimum Spanning Tree (MST)**
+  - **Centrality Analysis** (Degree, Closeness, Betweenness, Eigenvector)
+  - **Community Detection** (Louvain method)
 
-Graph Construction:
+## 💡 Key Findings
 
-Use correlation matrices to build distance graphs.
+- Centrality generally increases during crises, indicating stronger market-wide connectivity.
+- The number of distinct communities decreases, reflecting a more unified market response.
+- Dominant industries shift:
+  - Pre-IMF: Financial & securities firms
+  - Post-IMF & Subprime: Raw materials & heavy industries
+  - Post-COVID: Tech, e-commerce, and domestic market-oriented firms
 
-Filter edges to retain the most significant relationships.
+## 📈 Investment Strategy
 
-Analysis Techniques:
+- Defined new sectors based on degree centrality:
+  - **Hub & Spoke** (high centrality)
+  - **Chain Link** (medium centrality)
+  - **Fringe Player** (low centrality)
+- Constructed efficient frontiers before, during, and after the IMF crisis.
+- Portfolio optimization showed how rebalancing can minimize risk during downturns.
 
-Minimum Spanning Tree (MST) to understand core-peripheral relationships.
+## 🛠 Tools & Technologies
 
-Centrality Metrics (Degree, Closeness, Betweenness, Eigenvector) to identify influential stocks.
+- Python
+- NetworkX
+- Pandas, NumPy
+- Matplotlib, Seaborn
 
-Community Detection via the Louvain method to detect clusters of companies.
 
-💡 Key Findings
-During crises, market centrality increases, and communities become fewer, reflecting a unified response to shocks.
+## 🧑‍💻 Authors
 
-The centrality of financial institutions declines, while raw materials, tech, and domestic industries gain importance.
-
-Shifts in centrality during each crisis were unique and aligned with the nature of the crisis (economic, financial, or external).
-
-📈 Investment Strategy Application
-Companies were categorized into new sectors: Hub & Spoke, Chain Link, and Fringe Player based on degree centrality.
-
-These sectors were used to construct portfolios and plot efficient frontiers.
-
-Results indicate optimal portfolio adjustments can reduce risk and maintain performance during crises.
-
-🛠 Technologies & Tools
-Python (for data processing and graph analysis)
-
-NetworkX
-
-Pandas, NumPy
-
-Matplotlib/Seaborn (for visualization)
+- Jaewoong Jeong (jaywoong.jeong@kaist.ac.kr)  
+- Hyeongmin Park (mike980409@kaist.ac.kr)  
+- Juchan Lee (jclee0109@kaist.ac.kr)  
+- Minkyung Choi (minkyungww@kaist.ac.kr)  
+(Korea Advanced Institute of Science and Technology)
